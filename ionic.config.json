@@ -1,0 +1,8 @@
+{
+  "name": "LoginSmartHouse",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}

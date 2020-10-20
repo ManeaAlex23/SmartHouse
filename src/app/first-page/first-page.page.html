@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>FirstPage</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-label></ion-label>
+  <ion-datetime displayFormat="YYYY/M/D  HH:mm " pickerFormat="YYYY MM D HH:mm +01:00" [(ngModel)]="myDate"></ion-datetime>
+  <p style="text-align:center">Please select your statut:</p>
+  <ion-row>
+    <ion-col>
+
+  </ion-col>
+</ion-row>
+<ion-row>
+  <ion-col>
+
+</ion-col>
+</ion-row>
+  <ion-button class="ion-padding" expand="block" [routerLink]="['/login']" size="large">User</ion-button>
+  <ion-button class="ion-padding" [routerLink]="['/admin-page']" expand="block" color="primary" size="large">Admin</ion-button>
+</ion-content> 

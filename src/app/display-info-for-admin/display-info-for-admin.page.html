@@ -1,0 +1,103 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/first-page"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Private Informations</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-row>
+   
+    <ion-item>
+      <ion-button (click)="DeleteOrBlockSelectedUser()">Delete Selected User</ion-button>
+    </ion-item>
+  </ion-row>
+
+
+  <ion-row>
+   
+    <ion-item>
+      <h1>Nume: {{ModelToShow.name}}</h1>
+    </ion-item>
+  </ion-row>
+
+  
+  <!-- <ion-row>
+   
+    <ion-item>
+      <h1>Numele de Logare: {{ModelToShow.username}}</h1>
+    </ion-item>
+  </ion-row> -->
+  <ion-row>
+   
+    <ion-item>
+      <h1>Id: {{ModelToShow.id}}</h1>
+    </ion-item>
+  </ion-row>
+  <ion-row>
+   
+    <ion-item>
+      <h1>Client Nou: {{ModelToShow.isNew}}</h1>
+    </ion-item>
+  </ion-row>
+  <ion-row>
+   
+    <ion-item>
+  
+      <ion-label>Data Inregistrarii:</ion-label>
+      <ion-datetime displayFormat="YYYY/M/D  HH:mm " pickerFormat="YYYY MM D HH:mm +01:00" [(ngModel)]="date" value="ModelToShow.createdAt"></ion-datetime>
+    
+    </ion-item>
+    <h1>{{ModelToShow.createdAt}}</h1>
+  </ion-row>
+
+  <ion-row>
+    <ion-item>
+      <h1>Seria Sistemului: {{ModelToShow.Current_Mac_Adress}}</h1>
+    </ion-item>
+  </ion-row>
+
+  <ion-row>
+    <ion-item>
+      
+      <ion-label>Ultima logare</ion-label>
+      <ion-datetime displayFormat="YYYY/M/D  HH:mm " pickerFormat="YYYY MM D HH:mm +01:00" [(ngModel)]="ModelToShow.Last_Seen_Online"></ion-datetime>
+      
+    </ion-item>
+    <h2>{{ModelToShow.Last_Seen_Online}}</h2>
+  </ion-row>
+
+  <ion-row>
+    <ion-item>
+      <h1>Scurgeri : {{ModelToShow.Leak}}</h1>
+    </ion-item>
+  </ion-row>
+  <ion-row>
+
+    <ion-item>
+      <h1>Seria Sistemului: {{ModelToShow.Current_Mac_Adress}}</h1>
+    </ion-item>
+  </ion-row>
+<!-- 
+  <ion-row>
+    <ion-item>
+      <h1>Cod Numeric Personal: {{ModelToShow.CNP}}</h1>
+    </ion-item>
+  </ion-row> -->
+
+  <ion-row>
+    <ion-item>
+      <h1>Orasul uzual: {{ModelToShow.Oras}}</h1>
+    </ion-item>
+  </ion-row>
+
+  <ion-row>
+    <ion-item>
+      <h1>ParolaDeSchimbare: {{ModelToShow.ParolaDeSchimbare}}</h1>
+    </ion-item>
+  </ion-row>
+
+</ion-content>

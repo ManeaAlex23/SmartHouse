@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/login"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Informations</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  
+  <div class="ion-padding">
+
+    <ion-button style="align-content: flex-end;" (click)="logoutUser()" >
+      Logout
+    </ion-button>
+
+    <ion-row>
+      <ion-label size="2">Bun Venit {{Model.name}}</ion-label>
+      
+    </ion-row>
+
+   
+    <ion-list>
+
+      <ion-item>
+        <ion-label>Seteaza referinta temperaturii</ion-label>
+        <ion-range min="15" max="35" aria-set-size="1" [(ngModel)]="TemperatureReference" (ionChange)="CheckIfUserChooseAreference()" color="danger" pin="true"></ion-range>
+        <ion-icon range-left small name="sunny"></ion-icon>
+        <ion-icon range-right name="sunny"></ion-icon>
+        <h1>{{TemperatureReference}}</h1>
+      </ion-item>
+    
+  
+    
+    </ion-list>
+  
+  <ion-button>
+    <ion-icon name="thermometer-outline"style="zoom: 2"   ></ion-icon>
+    <h1>{{Model.temperature}}°C</h1>
+     <ion-icon name="rainy-outline" style="zoom: 2"></ion-icon>
+     <h3>{{Model.humidity}}%</h3> 
+     
+  </ion-button>
+  </div>
+
+
+  <ion-item> 
+    <ion-label>Deschide Usa</ion-label>
+  
+  <ion-toggle [(ngModel)]="myServo" (ionChange)="OpenDoor()"></ion-toggle>
+    
+</ion-item>
+
+ 
+    <ion-button  style="align-content: flex-end;" [routerLink]="['/dashboard']">
+      My profile
+    </ion-button>
+
+
+</ion-content>
+
+

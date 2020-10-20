@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    
+    <ion-title>AdminPage</ion-title>
+    <!-- <ion-buttons slot="start">
+      <ion-back-button defaultHref="/first-page"></ion-back-button>
+    </ion-buttons> -->
+  </ion-toolbar>
+  
+
+</ion-header>
+
+<ion-content>
+ 
+  <ion-col>
+  <ion-list>
+    <ion-item>
+      <ion-label>Users</ion-label>
+         <ion-select multiple="true" [(ngModel)]="name" (ionChange)="onChange(name)" (click)="GetfireUsers()">  
+          <ion-select-option *ngFor="let user of arrData" expand="true" (click)="GetfireUsers()" (ionChange)="onChange(user.email)">{{user.name}}</ion-select-option>
+         </ion-select>
+    </ion-item>
+  </ion-list>
+</ion-col>
+  <ion-row>
+  <ion-button [routerLink]="['/back']" expand="block" color="primary">Add User</ion-button>
+  <ion-button expand="block" color=primary (click)="VerifyIfClientSelect()">Informatii despre clientul selectatat</ion-button>
+</ion-row>
+
+  <!-- <ion-button class="ion-padding" expand="block" (click)="GetfireUsers()" size="large">View users</ion-button> -->
+  <!-- <ion-list>
+    <ion-item *ngFor="let user of arrData">
+      {{user.email}}
+    </ion-item>
+  </ion-list> -->
+
+
+</ion-content>
